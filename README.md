@@ -15,3 +15,5 @@ chiunque verifica offline.
 
 Il workflow `.github/workflows/collaudo.yml` richiama il workflow fidato di Collaudo; il contratto l'ha
 aperto il cliente spingendo `.collaudo/contratto.json` sul ramo principale (la beta gratuita).
+
+Il workflow fidato gira in tre job (C-0056): il codice del progetto gira solo nel job senza token.

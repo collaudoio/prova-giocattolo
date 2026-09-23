@@ -2,7 +2,8 @@
 # e il servizio dà ordini solo a quello (claim `job_workflow_ref`). Su `push`, mai su `pull_request`
 # (C-0034: il commit che il token OIDC certifica è il commit consegnato); `workflow_dispatch` per la
 # prova rossa sul commit base. Due soli permessi: leggere il codice e chiedere l'identità del workflow.
-# Nessun segreto: l'identità è il token OIDC.
+# Nessun segreto: l'identità è il token OIDC. Il contratto lo trova il servizio dal repository; si apre
+# spingendo `.collaudo/contratto.json` sul ramo principale (la beta, C-0053).
 name: collaudo
 
 on:
@@ -15,7 +16,4 @@ permissions:
 
 jobs:
   collaudo:
-    if: vars.COLLAUDO_CONTRATTO != ''
     uses: collaudoio/azione/.github/workflows/collaudo.yml@v1
-    with:
-      contratto: ${{ vars.COLLAUDO_CONTRATTO }}

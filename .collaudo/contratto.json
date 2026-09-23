@@ -1,0 +1,6 @@
+{
+  "tipo": "correzione",
+  "prova": { "file": ["test/somma.test.ts"] },
+  "valore": { "importo": 100, "valuta": "EUR" },
+  "scadenza": "2026-10-07"
+}

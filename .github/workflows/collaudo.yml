@@ -1,0 +1,26 @@
+# Il workflow di Collaudo nel repository del cliente (C-0034: su `push`, mai su `pull_request`, così il
+# commit che il token OIDC certifica è il commit consegnato). Due soli permessi: leggere il codice e
+# chiedere l'identità del workflow. Nessun segreto: l'identità è il token OIDC.
+name: collaudo
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  collaudo:
+    runs-on: ubuntu-latest
+    if: vars.COLLAUDO_CONTRATTO != ''
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npm ci
+      - uses: collaudoio/azione@v1
+        with:
+          contratto: ${{ vars.COLLAUDO_CONTRATTO }}

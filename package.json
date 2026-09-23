@@ -1,0 +1,12 @@
+{
+  "name": "prova-giocattolo",
+  "private": true,
+  "type": "module",
+  "description": "Il repository di prova di Collaudo: una somma sbagliata, una prova rossa, una consegna che la ripara.",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.1"
+  }
+}

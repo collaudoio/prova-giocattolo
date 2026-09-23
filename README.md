@@ -13,5 +13,5 @@ Un produttore consegna la correzione su un ramo; Collaudo la prova **verde per l
 verde, suite verde, prova intatta, niente trucchi, contro-mutazione superata) e firma un verdetto che
 chiunque verifica offline.
 
-Il workflow `.github/workflows/collaudo.yml` gira solo quando la variabile del repository
-`COLLAUDO_CONTRATTO` è impostata.
+Il workflow `.github/workflows/collaudo.yml` richiama il workflow fidato di Collaudo; il contratto l'ha
+aperto il cliente spingendo `.collaudo/contratto.json` sul ramo principale (la beta gratuita).

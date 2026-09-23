@@ -1,4 +1,4 @@
-/** Somma due numeri. (Il difetto che il contratto chiede di chiudere: sottrae.) */
+/** Somma due numeri. */
 export function somma(a: number, b: number): number {
-  return a - b;
+  return a + b;
 }

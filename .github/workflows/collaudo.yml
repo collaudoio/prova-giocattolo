@@ -9,6 +9,10 @@ name: collaudo
 on:
   push:
   workflow_dispatch:
+    inputs:
+      contratto:
+        description: "Un contratto aperto dall'ufficio (la seconda fuga degli oracoli); vuoto: lo trova il servizio"
+        required: false
 
 permissions:
   contents: read
@@ -17,3 +21,5 @@ permissions:
 jobs:
   collaudo:
     uses: collaudoio/azione/.github/workflows/collaudo.yml@v1
+    with:
+      contratto: ${{ inputs.contratto }}

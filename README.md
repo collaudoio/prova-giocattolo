@@ -17,3 +17,7 @@ Il workflow `.github/workflows/collaudo.yml` richiama il workflow fidato di Coll
 aperto il cliente spingendo `.collaudo/contratto.json` sul ramo principale (la beta gratuita).
 
 Il workflow fidato gira in tre job (C-0056): il codice del progetto gira solo nel job senza token.
+
+Dal 01/10 il contratto aperto è una **protezione** provata da uno snapshot su file
+(`test/doppio-snap.test.ts` e il suo `.snap`): Collaudo sigilla l'atteso per voce, e una consegna che lo
+riscrive tocca la prova. La somma è quella consegnata nel contratto di prima.

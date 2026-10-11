@@ -1,9 +1,6 @@
 {
-  "tipo": "protezione",
-  "prova": {
-    "file": ["test/doppio-snap.test.ts"],
-    "mutazioneDichiarata": { "file": "src/doppio.ts", "cerca": "n * 2", "sostituisci": "n * 3" }
-  },
+  "tipo": "correzione",
+  "prova": { "file": ["test/somma-snap.test.ts"] },
   "valore": { "importo": 100, "valuta": "EUR" },
-  "scadenza": "2026-10-15"
+  "scadenza": "2026-10-25"
 }
